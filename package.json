@@ -1,6 +1,6 @@
 {
   "name": "@oncoding/pudding",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tool generating  cli tool scaffold",
   "bin": {
     "pudding": "index.js",
