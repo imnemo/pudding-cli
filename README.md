@@ -45,4 +45,10 @@ hellocli completion
 
 # show some examples
 hello example -h
+
+# new a command combo
+pudding command new combo --combo
+
+# new a command not combo
+pudding command new --path command bar
 ```

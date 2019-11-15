@@ -1,6 +1,6 @@
 const signal = require('signale');
 
-exports.command = ['chg'];
+exports.command = ['chgg'];
 exports.desc = '';
 
 exports.builder = (yargs) => {
