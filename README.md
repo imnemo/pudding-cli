@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm i @oncoding/pudding
+npm i @oncoding/pudding -g
 ```
 
 ## Add Bash Completion
@@ -11,7 +11,7 @@ npm i @oncoding/pudding
 get completion script using command below, and do sth it shows u!
 
 ```bash
-pudding completion -g
+pudding completion
 ```
 
 ## Usage
