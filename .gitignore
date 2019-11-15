@@ -4,7 +4,6 @@
 **/*.out
 **/*.dSYM
 build
-package-lock.json
 
 # Logs
 logs
@@ -64,4 +63,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
