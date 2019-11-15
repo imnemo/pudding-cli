@@ -1,27 +1,45 @@
 {
-  "name": "pudding-cli",
-  "version": "0.0.0",
+  "name": "@oncoding/pudding",
+  "version": "0.0.1",
   "description": "A tool generating  cli tool scaffold",
-  "main": "index.js",
   "bin": {
-    "pudding": "./index.js",
-    "pudding-cli": "./index.js"
+    "pudding": "index.js",
+    "pudding-cli": "index.js"
+  },
+  "pudding": {
+    "mainBinName": "pudding"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./script/postinstall.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imnemo/pudding-cli.git"
   },
-  "keywords": [
-    "cli",
-    "scaffold"
-  ],
-  "author": "imnemo <oncoding1988@gmail.com>",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/imnemo/pudding-cli/issues"
   },
-  "homepage": "https://github.com/imnemo/pudding-cli#readme"
+  "homepage": "https://github.com/imnemo/pudding-cli#readme",
+  "license": "MIT",
+  "keywords": [
+    "oncoding",
+    "@oncoding/pudding",
+    "cli",
+    "scafold"
+  ],
+  "dependencies": {
+    "chalk": "3.0.0",
+    "debug": "4.0.1",
+    "fs-extra": "7.0.0",
+    "inquirer": "6.2.1",
+    "semver": "6.0.0",
+    "shelljs": "0.8.3",
+    "signale": "1.4.0",
+    "yargs": "14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2"
+  }
 }
