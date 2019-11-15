@@ -11,7 +11,7 @@ npm i @oncoding/pudding
 get completion script using command below, and do sth it shows u!
 
 ```bash
-pudding completion
+pudding completion -g
 ```
 
 ## Usage
