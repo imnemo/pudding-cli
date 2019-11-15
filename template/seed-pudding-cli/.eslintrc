@@ -1,0 +1,15 @@
+{
+  "extends": "eslint-config-airbnb-base",
+  "rules": {
+    "no-console": "off",
+    "prefer-const": "off",
+    "no-var": "error",
+    "semi": "error",
+    "no-unused-vars": "off",
+    "no-unused-expressions": "warn",
+    "array-bracket-spacing": "off",
+    "global-require": "warn",
+    "prefer-rest-params": "warn",
+    "no-nested-ternary": "warn"
+  }
+}

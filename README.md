@@ -16,8 +16,33 @@ pudding completion -g
 
 ## Usage
 
-show some examples
+### new project
 
 ```bash
-pudding example -h
+$ pudding project new hellocli
+
+☐  pending   拷贝工程模板到/Users/nemo/code/imnemo/hellocli
+☐  pending   生成新工程package.json
+✔  success   hellocli新建成功!
+●  note      请执行后续命令:
+
+    cd hellocli
+    npm i. - g
+    hellocli completion
+```
+
+### dev new cli
+
+```
+cd hellocli
+
+# install for dev
+npm i . -g
+
+# then you can use hellocli now
+# add bash compeltion
+hellocli completion
+
+# show some examples
+hello example -h
 ```

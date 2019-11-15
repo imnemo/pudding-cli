@@ -1,31 +1,25 @@
 {
-  "name": "@oncoding/pudding",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "A tool generating  cli tool scaffold",
+  "description": "{{name}}",
   "bin": {
-    "pudding": "index.js",
-    "pudding-cli": "index.js"
+    "{{name}}": "index.js"
   },
   "pudding": {
-    "mainBinName": "pudding"
+    "mainBinName": "{{name}}"
   },
   "scripts": {
     "postinstall": "./script/postinstall.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imnemo/pudding-cli.git"
+    "url": ""
   },
-  "bugs": {
-    "url": "https://github.com/imnemo/pudding-cli/issues"
-  },
-  "homepage": "https://github.com/imnemo/pudding-cli#readme",
   "license": "MIT",
   "keywords": [
     "oncoding",
     "@oncoding/pudding",
-    "cli",
-    "scafold"
+    "cli"
   ],
   "dependencies": {
     "chalk": "3.0.0",
