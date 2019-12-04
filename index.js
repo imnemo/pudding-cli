@@ -44,7 +44,7 @@ program = yargs
 program.fail((msg, err) => {
   // console.log(arguments);
   let e = msg ? new Error(msg) : (err instanceof Error ? err : new Error(err));
-  signal.fatal(e);
+  signal.fatal(e.message);
   process.exit(1);
 });
 
