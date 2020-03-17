@@ -1,10 +1,8 @@
-
-const signal = require('signale');
 const fs = require('fs-extra');
 const swig = require('swig');
-const { shelljs } = require('../../lib/shell');
+const { pkginfo, response } = require('../../lib');
+const { signale } = require('../../lib').signale;
 const { toolConfig } = require('../../config');
-const pkginfo = require('../../lib/pkginfo');
 
 exports.command = ['new'];
 exports.desc = '新增一个命令';
@@ -32,27 +30,21 @@ pudding command new --path command/subcommand --combo \${projectName}
 exports.handler = async (argv) => {
   let localPkgInfo;
   try {
-    // eslint-disable-next-line import/no-dynamic-require
     localPkgInfo = require(`${process.cwd()}/package.json`);
-    localPkgInfo.pudding.mainBinName;
   } catch (e) {
-    signal.fatal('请到CLI工程目录下执行!');
-    process.exit();
+    response.fatal('请到CLI工程目录下执行!', 1, false);
   }
 
   let name = argv._[2];
   if (!name) {
-    signal.fatal('请指定命令名称!');
-    yargsIns.showHelp();
-    process.exit(1);
+    response.fatal('请指定命令名称!', 2);
   }
 
   let cmdPath = `cmds${argv.path ? `/${argv.path}` : ''}`;
   let cmdFile = `${cmdPath}/${name}.js`;
 
   if (await fs.pathExists(`${process.cwd()}/${cmdFile}`)) {
-    signal.fatal(`${cmdFile} 已存在!`);
-    process.exit(2);
+    response.fatal(`${cmdFile} 已存在!`, 3, false);
   }
 
   let tplName = argv.combo ? 'combo' : 'cmd';
@@ -65,8 +57,8 @@ exports.handler = async (argv) => {
     await fs.mkdir(`${process.cwd()}/${cmdFile}`.slice(0, -3));
   }
 
-  signal.success(`${name} 新建成功!`);
-  signal.note(`可以试试执行:
+  signale.success(`${name} 新建成功!`);
+  signale.note(`可以试试执行:
 
   ${pkginfo.getMainBinName()} ${cmdPath.slice(5).replace(/\//g, ' ')} ${name} -h
   `);

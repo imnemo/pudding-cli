@@ -10,6 +10,12 @@
     "array-bracket-spacing": "off",
     "global-require": "warn",
     "prefer-rest-params": "warn",
-    "no-nested-ternary": "warn"
+    "no-nested-ternary": "warn",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
   }
 }

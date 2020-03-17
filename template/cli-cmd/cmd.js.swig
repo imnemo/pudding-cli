@@ -1,4 +1,4 @@
-const signal = require('signale');
+const { signale } = require('../../lib');
 
 exports.command = ['{{name}}'];
 exports.desc = '{{desc}}';
@@ -12,7 +12,7 @@ exports.builder = (yargs) => {
 };
 
 exports.handler = async (argv) => {
-  signal.info(`\nargvs from yargs: ${JSON.stringify(argv, null, 2)}`);
-  signal.info(`\nargvs from process.argv: ${JSON.stringify(process.argv, null, 2)}`);
+  signale.debug(`\nargvs from yargs: ${JSON.stringify(argv, null, 2)}`);
+  signale.debug(`\nargvs from process.argv: ${JSON.stringify(process.argv, null, 2)}`);
 };
 

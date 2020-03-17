@@ -8,8 +8,15 @@
     "no-unused-vars": "off",
     "no-unused-expressions": "warn",
     "array-bracket-spacing": "off",
-    "global-require": "warn",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
     "prefer-rest-params": "warn",
-    "no-nested-ternary": "warn"
+    "no-nested-ternary": "warn",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
   }
 }

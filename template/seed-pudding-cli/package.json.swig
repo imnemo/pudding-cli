@@ -23,18 +23,18 @@
   ],
   "dependencies": {
     "chalk": "3.0.0",
-    "debug": "4.0.1",
-    "fs-extra": "7.0.0",
-    "inquirer": "6.2.1",
-    "semver": "6.0.0",
+    "debug": "4.1.1",
+    "fs-extra": "8.1.0",
+    "inquirer": "7.1.0",
+    "semver": "7.1.3",
     "shelljs": "0.8.3",
     "signale": "1.4.0",
     "swig": "1.4.2",
-    "yargs": "14.2.0"
+    "yargs": "15.3.0"
   },
   "devDependencies": {
-    "eslint": "6.6.0",
+    "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.0.0",
-    "eslint-plugin-import": "2.18.2"
+    "eslint-plugin-import": "2.20.1"
   }
 }

@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const yargs = require('yargs');
-const signal = require('signale');
-const pkginfo = require('./lib/pkginfo');
+const { pkginfo, middleware, response } = require('./lib');
 
 const mainBinName = pkginfo.getMainBinName();
 
@@ -19,7 +18,7 @@ program = yargs
     describe: '运行时环境',
     choices: ['unittest', 'local', 'staging', 'preview', 'production'],
     type: 'string',
-    default: 'local',
+    default: 'production',
   })
   .option('verbose', {
     alias: 'V',
@@ -40,17 +39,11 @@ program = yargs
     },
   });
 
-// 这里只能全局捕获同步的异常，无法捕获async里的异常
-program.fail((msg, err) => {
-  // console.log(arguments);
-  let e = msg ? new Error(msg) : (err instanceof Error ? err : new Error(err));
-  signal.fatal(e);
-  process.exit(1);
-});
+program.middleware(middleware);
 
+// eslint-disable-next-line no-unused-expressions
 program.argv;
 
 process.on('uncaughtException', (e) => {
-  signal.fatal(e);
-  process.exit(1);
+  response.fatal(e, 1023, 1);
 });

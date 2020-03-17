@@ -52,3 +52,14 @@ pudding command new combo --combo
 # new a command not combo
 pudding command new --path command bar
 ```
+
+### api
+
+#### logger
+
+[signale](https://github.com/klaussinani/signale) is used. All commands will show all debug infos with the param `-e local`, and will only show `warn, error, fatal` infos by default.
+
+```
+hello example echo -e local
+hello example echo
+```
