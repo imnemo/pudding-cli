@@ -27,7 +27,7 @@ const interactive = new Signale(interactiveOptions);
 
 const configSigale = (option) => {
   let { argv } = yargs;
-  if (argv.env === 'local' || argv.env === 'unittest') {
+  if (argv.debug === true) {
     /**
      * @todo
      *  signale没有提供一个类似setLogLevel的api，来实现运行时修改logLevel

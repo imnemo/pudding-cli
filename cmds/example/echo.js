@@ -19,6 +19,8 @@ exports.handler = async (argv) => {
 
   signale.log('test log');
 
+  signale.time();
+
   signale.await('test await');
   signale.complete('test complete');
   signale.fav('test fav');
@@ -34,4 +36,6 @@ exports.handler = async (argv) => {
   signale.warn('test warn');
   signale.error('test error');
   signale.fatal('test fatal');
+
+  signale.timeEnd();
 };

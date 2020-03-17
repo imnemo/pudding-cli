@@ -20,6 +20,12 @@ program = yargs
     type: 'string',
     default: 'production',
   })
+  .option('debug', {
+    alias: 'd',
+    describe: '是否是调试模式（打开所有日志）',
+    type: 'boolean',
+    default: false,
+  })
   .option('verbose', {
     alias: 'V',
     describe: '打印命令的详细执行过程',
