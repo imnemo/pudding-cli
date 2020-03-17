@@ -57,9 +57,9 @@ pudding command new --path command bar
 
 #### logger
 
-[signale](https://github.com/klaussinani/signale) is used. All commands will show all debug infos with the param `-e local`, and will only show `warn, error, fatal` infos by default.
+[signale](https://github.com/klaussinani/signale) is used. All commands will show all debug infos with the param `-d` or `--debug`. By default, the logger `debug` and `log` will not be shown.
 
 ```
-hello example echo -e local
+hello example echo -d
 hello example echo
 ```
