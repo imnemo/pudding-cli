@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('../bootstrap');
 const path = require('path');
 const fs = require('fs-extra');
 const chalk = require('chalk');

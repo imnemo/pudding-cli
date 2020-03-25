@@ -1,8 +1,8 @@
 const fs = require('fs-extra');
 const swig = require('swig');
-const { pkginfo, response } = require('../../lib');
-const { signale } = require('../../lib').signale;
-const { toolConfig } = require('../../config');
+const { pkginfo, response } = require('@/lib');
+const { signale } = require('@/lib').signale;
+const { toolConfig } = require('@/config');
 
 exports.command = ['new'];
 exports.desc = '新增一个命令';

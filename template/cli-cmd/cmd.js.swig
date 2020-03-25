@@ -1,4 +1,4 @@
-const { signale } = require('../../lib');
+const { signale } = require('@/lib').signale;
 
 exports.command = ['{{name}}'];
 exports.desc = '{{desc}}';

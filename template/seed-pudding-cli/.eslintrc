@@ -1,5 +1,29 @@
 {
   "extends": "eslint-config-airbnb-base",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "./"
+        ]
+      },
+      "alias": {
+        "extensions": [
+          ".js"
+        ],
+        "map": [
+          [
+            "@",
+            "./"
+          ]
+        ]
+      }
+    }
+  },
   "rules": {
     "no-console": "off",
     "prefer-const": "off",
@@ -8,7 +32,8 @@
     "no-unused-vars": "off",
     "no-unused-expressions": "warn",
     "array-bracket-spacing": "off",
-    "global-require": "warn",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
     "prefer-rest-params": "warn",
     "no-nested-ternary": "warn",
     "no-plusplus": [
@@ -16,6 +41,7 @@
       {
         "allowForLoopAfterthoughts": true
       }
-    ]
+    ],
+    "import/no-self-import": "off"
   }
 }

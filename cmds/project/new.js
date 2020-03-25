@@ -1,9 +1,9 @@
 
 const fs = require('fs-extra');
 const swig = require('swig');
-const { signale } = require('../../lib').signale;
-const { response } = require('../../lib');
-const { toolConfig } = require('../../config');
+const { signale } = require('@/lib').signale;
+const { response } = require('@/lib');
+const { toolConfig } = require('@/config');
 
 exports.command = ['new'];
 exports.desc = '新建一个CLI工程';

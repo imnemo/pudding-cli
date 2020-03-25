@@ -1,1 +1,1 @@
-module.exports = require('../core/response');
+module.exports = require('@/core/response');

@@ -1,5 +1,29 @@
 {
   "extends": "eslint-config-airbnb-base",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "./"
+        ]
+      },
+      "alias": {
+        "extensions": [
+          ".js"
+        ],
+        "map": [
+          [
+            "@",
+            "./"
+          ]
+        ]
+      }
+    }
+  },
   "rules": {
     "no-console": "off",
     "prefer-const": "off",
@@ -17,6 +41,7 @@
       {
         "allowForLoopAfterthoughts": true
       }
-    ]
+    ],
+    "import/no-self-import": "off"
   }
 }

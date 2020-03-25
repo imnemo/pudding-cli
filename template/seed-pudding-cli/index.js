@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+require('./bootstrap');
+
 const yargs = require('yargs');
-const { pkginfo, middleware, response } = require('./lib');
+const { pkginfo, middleware, response } = require('@/lib');
 
 const mainBinName = pkginfo.getMainBinName();
 
@@ -19,6 +21,12 @@ program = yargs
     choices: ['unittest', 'local', 'staging', 'preview', 'production'],
     type: 'string',
     default: 'production',
+  })
+  .option('debug', {
+    alias: 'd',
+    describe: '是否是调试模式（打开所有日志）',
+    type: 'boolean',
+    default: false,
   })
   .option('verbose', {
     alias: 'V',

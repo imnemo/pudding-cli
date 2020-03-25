@@ -1,6 +1,6 @@
 
-const { getCliParamOptList } = require('../../lib/shell');
-const { signale, interactive } = require('../../lib').signale;
+const { getCliParamOptList } = require('@/lib/shell');
+const { signale, interactive } = require('@/lib').signale;
 
 exports.command = ['echo'];
 exports.desc = '测试对argv的解析，以及其他试验';

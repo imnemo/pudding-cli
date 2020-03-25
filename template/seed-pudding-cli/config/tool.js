@@ -1,7 +1,7 @@
 
 const path = require('path');
 const os = require('os');
-const pkginfo = require('../lib/pkginfo');
+const pkginfo = require('@/lib/pkginfo');
 
 module.exports = {
   root: {

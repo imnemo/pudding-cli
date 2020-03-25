@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+require('./bootstrap');
+
 const yargs = require('yargs');
-const { pkginfo, middleware, response } = require('./lib');
+const { pkginfo, middleware, response } = require('@/lib');
 
 const mainBinName = pkginfo.getMainBinName();
 

@@ -1,7 +1,6 @@
 const os = require('os');
 const path = require('path');
 const signal = require('signale');
-const { shelljs } = require('../lib/shell');
 
 exports.command = ['completion'];
 exports.desc = '生成自动补全的shell脚本';

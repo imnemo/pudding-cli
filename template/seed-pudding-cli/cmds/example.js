@@ -1,4 +1,3 @@
-
 exports.command = ['example'];
 exports.desc = '测试及演示，特性试验场';
 
