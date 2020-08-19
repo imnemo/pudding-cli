@@ -31,7 +31,7 @@
     "inquirer": "7.1.0",
     "module-alias": "2.2.2",
     "semver": "7.1.3",
-    "shelljs": "0.8.3",
+    "shelljs": "0.8.4",
     "signale": "1.4.0",
     "swig": "1.4.2",
     "yargs": "15.3.0"

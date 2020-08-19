@@ -1,4 +1,5 @@
 
+const yargs = require('yargs');
 const fs = require('fs-extra');
 const swig = require('swig');
 const { signale } = require('@/lib').signale;
@@ -8,11 +9,13 @@ const { toolConfig } = require('@/config');
 exports.command = ['new'];
 exports.desc = '新建一个CLI工程';
 
-let yargsIns;
-
-exports.builder = (yargs) => {
-  yargsIns = yargs;
-  yargs
+/**
+ * build args
+ *
+ * @param {yargs.Argv<{}>} yargsIns yargs instance
+ */
+exports.builder = (yargsIns) => {
+  yargsIns
     .example(`
 pudding project new \${projectName}
 pudding project new --name \${projectName}

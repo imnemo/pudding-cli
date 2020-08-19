@@ -1,3 +1,4 @@
+const yargs = require('yargs');
 const fs = require('fs-extra');
 const swig = require('swig');
 const { pkginfo, response } = require('@/lib');
@@ -7,14 +8,20 @@ const { toolConfig } = require('@/config');
 exports.command = ['new'];
 exports.desc = '新增一个命令';
 
-let yargsIns;
-
-exports.builder = (yargs) => {
-  yargsIns = yargs;
-  yargs
+/**
+ * build args
+ *
+ * @param {yargs.Argv<{}>} yargsIns yargs instance
+ */
+exports.builder = (yargsIns) => {
+  yargsIns
     .example(`
 pudding command new --path command/subcommand --combo \${projectName}
     `)
+    .option('test', {
+      alias: 't',
+      describe: 'test',
+    })
     .option('path', {
       alias: 'p',
       describe: '命令路径',

@@ -1,10 +1,16 @@
+const yargs = require('yargs');
 const { signale } = require('@/lib').signale;
 
 exports.command = ['{{name}}'];
 exports.desc = '{{desc}}';
 
-exports.builder = (yargs) => {
-  yargs
+/**
+ * build args
+ *
+ * @param {yargs.Argv<{}>} yargsIns yargs instance
+ */
+exports.builder = (yargsIns) => {
+  yargsIns
     .option('foo', {
       alias: 'f',
       describe: 'param foo for test',

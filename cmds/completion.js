@@ -1,3 +1,4 @@
+const yargs = require('yargs');
 const os = require('os');
 const path = require('path');
 const signal = require('signale');
@@ -7,8 +8,13 @@ exports.desc = '生成自动补全的shell脚本';
 
 let supportedShellList = ['zsh', 'bash'];
 
-exports.builder = (yargs) => {
-  yargs
+/**
+ * build args
+ *
+ * @param {yargs.Argv<{}>} yargsIns yargs instance
+ */
+exports.builder = (yargsIns) => {
+  yargsIns
     .option('shell', {
       alias: 's',
       describe: 'shell类型',

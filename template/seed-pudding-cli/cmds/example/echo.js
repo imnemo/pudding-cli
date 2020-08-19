@@ -1,3 +1,4 @@
+const yargs = require('yargs');
 
 const { getCliParamOptList } = require('@/lib/shell');
 const { signale, interactive } = require('@/lib').signale;
@@ -5,8 +6,13 @@ const { signale, interactive } = require('@/lib').signale;
 exports.command = ['echo'];
 exports.desc = '测试对argv的解析，以及其他试验';
 
-exports.builder = (yargs) => {
-  yargs
+/**
+ * build args
+ *
+ * @param {yargs.Argv<{}>} yargsIns yargs instance
+ */
+exports.builder = (yargsIns) => {
+  yargsIns
     .option('camel-like', {
       describe: '会把连字符自动转为驼峰',
     });
